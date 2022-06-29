@@ -1,0 +1,24 @@
+{
+  "name": "email-service-backend",
+  "version": "1.0.0",
+  "description": "Backend for email service",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec npx ts-node --files src/index.ts",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "author": "Vivek Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.0",
+    "nodemon": "^2.0.18",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
