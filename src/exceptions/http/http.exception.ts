@@ -2,8 +2,8 @@ import Exception from '../exception'
 
 export default class HTTPException extends Exception {
   constructor(
-    httpStatusCode: number,
-    errorCode: number,
+    httpStatusCode: string,
+    errorCode: string,
     errorMessage?: string,
     innerException?: Error
   ) {
@@ -11,5 +11,5 @@ export default class HTTPException extends Exception {
     this.httpStatusCode = httpStatusCode
   }
 
-  public httpStatusCode: number
+  public httpStatusCode: string
 }

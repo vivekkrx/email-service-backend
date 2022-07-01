@@ -1,6 +1,6 @@
 export default class Exception extends Error {
   constructor(
-    errorCode: number,
+    errorCode: string,
     errorMessage?: string,
     innerException?: Error
   ) {
@@ -8,6 +8,6 @@ export default class Exception extends Error {
     this.errorCode = errorCode
     this.innerException = innerException
   }
-  public errorCode: number
+  public errorCode: string
   public innerException?: Error
 }

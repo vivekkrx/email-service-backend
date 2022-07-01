@@ -2,10 +2,10 @@ import HTTPException from './http.exception'
 
 export default class BadRequestException extends HTTPException {
   constructor(
-    errorCode: number,
+    errorCode: string,
     errorMessage?: string,
     innerException?: Error
   ) {
-    super(400, errorCode, errorMessage, innerException)
+    super('400', errorCode, errorMessage, innerException)
   }
 }
