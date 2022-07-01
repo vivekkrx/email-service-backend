@@ -11,3 +11,9 @@ export type GetOrganisationEmailIdsControllerType = (
   res: Response,
   next: NextFunction
 ) => Promise<void>
+
+export type SendEmailControllerType = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => Promise<void>
