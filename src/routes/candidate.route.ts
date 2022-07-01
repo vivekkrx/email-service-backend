@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import { EmailIdsController } from '../controllers'
 
 export default class CandidateRoute {
   constructor() {
@@ -9,8 +10,9 @@ export default class CandidateRoute {
   private path: string = '/people/:candidateId/email-ids'
 
   private initialiseRoutes(): void {
-    this.router.get(this.path, (req, res) =>
-      res.send({ message: 'App is running fine!' })
+    this.router.get(
+      this.path,
+      new EmailIdsController().getCandiateEmailIdsController
     )
   }
 }

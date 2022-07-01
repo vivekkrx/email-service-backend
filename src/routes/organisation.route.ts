@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import { EmailIdsController } from '../controllers'
 
 export default class OrganisationRoute {
   constructor() {
@@ -9,8 +10,9 @@ export default class OrganisationRoute {
   private path: string = '/me/org/email-ids'
 
   private initialiseRoutes(): void {
-    this.router.get(this.path, (req, res) =>
-      res.send({ message: 'App is running fine!' })
+    this.router.get(
+      this.path,
+      new EmailIdsController().getOrganisationEmailIdsController
     )
   }
 }
