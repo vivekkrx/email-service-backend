@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
 import helmet from 'helmet'
 import env from './utils/envars'
-import { CandidateRoute, OrganisationRoute } from './routes'
+import { CandidateRoute, OrganisationRoute, SendEmailRoute } from './routes'
 
 class App {
   public app: Application
@@ -34,11 +34,13 @@ class App {
       const routes = {
         '/people/:candidateId/email-ids': 'GET',
         '/me/org/email-ids': 'GET',
+        '/send-email': 'POST',
       }
       res.json({ routes })
     })
     this.app.use(new CandidateRoute().router)
     this.app.use(new OrganisationRoute().router)
+    this.app.use(new SendEmailRoute().router)
   }
 }
 
