@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec npx ts-node --files src/index.ts",
     "build": "rm -rf dist && tsc -p tsconfig.json",
-    "start": "node dist/index.js"
+    "start": "node dist/src/index.js"
   },
   "author": "Vivek Kumar",
   "license": "ISC",
